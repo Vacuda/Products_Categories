@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Prod_Cate.Models.Category
+
+<header>
+    <table>
+        <tr>
+            <td class="side">
+                <a href="/Products">Products</a>
+            </td>
+            <td class="mid">|</td>
+            <td class="side">
+                <a>Categories</a>
+            </td>
+        </tr>
+    </table>
+</header>
+
+<div class="division"></div>
+
+<div class="row">
+    <div class="col col-6">
+        <h3>New Category</h3>
+
+        <form asp-action="Create_Category" asp-controller="Category" method="POST">
+            
+            <div class="form-group">
+                <label asp-for="Name">Category Name:</label><span asp-validation-for="Name"></span>
+                <input asp-for="Name" class="form-control" placeholder="---">
+            </div>
+            <button type="submit" class="btn btn-dark">Create</button>
+        </form>
+
+    </div>
+
+    <div class="col col-6">
+        <h3>Category List</h3>
+
+        <ul>
+            @foreach (var item in @ViewBag.Categories){
+                <li>
+                    <a href="/Categories/Delete/@item.CategoryId" class="btn btn-danger btn-small">Del</a>
+                    <a href="/Categories/View/@item.CategoryId">@item.Name</a>
+                </li>
+            }
+        </ul>
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+

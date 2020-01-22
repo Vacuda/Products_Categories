@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<Category>
+
+<a href="/Products" class="btn btn-success">Back</a>
+
+<h1>@ViewBag.Product.Name</h1>
+<div class="division"></div>
+
+<div class="row">
+    <div class="col col-6">
+        <h3>Categories:</h3>
+        <ul>
+            @foreach (var item in @ViewBag.Product.Connections){
+                <li>
+                    <a href="/Products/Remove_Cat/@ViewBag.Product.ProductId/@item.Category.CategoryId"
+                    class="btn btn-danger btn-small">Del</a>
+                    @item.Category.Name
+                </li>
+            }
+        </ul>
+    </div>
+
+    <div class="col col-6">
+
+        <form action="/Products/Add_Cat" method="POST">
+            <div class="form-group">
+                <label for="Category"><h3>Add Category:</h3></label>
+                <select name="Category" id="Category" class="form-control">
+                    <option value=""disabled selected>---</option>
+                    @foreach (var item in @Model){
+                        <option value="@item.CategoryId">@item.Name</option>
+                    }
+                </select>
+                <input type="hidden" name="Product" value="@ViewBag.Product.ProductId">
+            </div>
+            <input type="submit" class="btn btn-primary"value="Add">
+        </form>
+    </div>
+</div>
+
+<a href="/Products/Edit/@ViewBag.Product.ProductId" class="btn btn-dark">Edit</a>
+
+
+
+
+
+
+
+
+
+
+
+

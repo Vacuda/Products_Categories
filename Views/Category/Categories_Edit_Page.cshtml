@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Prod_Cate.Models.Category
+
+<a href="/Categories/View/@Model.CategoryId" class="btn btn-success">Back</a>
+
+<div class="division"></div>
+
+<div class="row">
+    <div class="col col-6">
+        <h3>Edit Category</h3>
+
+        <form asp-action="Edit_Category" asp-route-id= "@Model.CategoryId" asp-controller="Category" method="POST">
+            
+            <div class="form-group">
+                <label asp-for="Name">Category Name:</label><span asp-validation-for="Name"></span>
+                <input asp-for="Name" class="form-control" value="@Model.Name" placeholder="---">
+            </div>
+            <button type="submit" class="btn btn-dark">Submit</button>
+        </form>
+
+    </div>
+
+    <div class="col col-6">
+     
+    </div>
+</div>
+
+
+
+
+
+
+
+

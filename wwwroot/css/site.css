@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: top;
+    /* outline: 1px dotted red; */
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.container {
+    width: 970px;
+    min-height: 600px;
+    margin: 0 auto;
+    padding: 60px;
+    font-size: 15px;
+    background-color: rgb(160, 163, 154);
+}
+
+.division {
+    background-color: darkslateblue;
+    height: 2px;
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+}
+
+.small_division {
+    background-color: rgb(8, 4, 27);
+    height: 2px;
+    width: 30%;
+    margin: 20px 0px;
+    display: block;
+}
+
+input {
+    width: 60%;
+}
+
+h1 {
+    text-align: center;
+    display: block;
+}
+
+h4 {
+    margin-bottom: 50px;
+    text-align: center;
+    display: block;
+}
+
+.bottom_buttons {
+    margin: 0px auto;
+    width: 70%;
+}
+
+span {
+    display: inline-block;
+    color: red;
+    margin-left: 50px;
+}
+
+label {
+    display: inline-block;
+}
+
+header {
+    width: 300px;
+    display: block;
+    margin: 0px auto;
+}
+
+header table {
+    width: 100%;
+    text-align: center;
+}
+
+.side {
+    width: 45%;
+    font-size: 30px;
+}
+
+.mid {
+    width: 10%;
+    font-size: 30px;
+}
+
+th.th-name {
+    width: 60%;
+    text-align: center;
+}
+
+th.th-number {
+    width: 10%;
+    text-align: center;
+}
+
+th.th-chef {
+    width: 30%;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
+.btn-small {
+    width: 30px;
+    height: 20px;
+    font-size: 10px;
+    text-align: center;
+    padding: 0px;
+    line-height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 480px) {
+
+ 
+    
+}
+    
+@media only screen and (min-width: 481px) {
+
+
+
+}
+    
+@media only screen and (min-width: 1024px) {
+
+
+
+}
